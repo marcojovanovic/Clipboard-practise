@@ -1,248 +1,277 @@
 @import 'variables';
 
-.showcase{
+.showcase {
 
-    background: url(../img/bg-header-desktop.png) no-repeat center center/cover; 
-    height: 85rem;
+  background: url(../img/bg-header-desktop.png) no-repeat center center/cover;
+  height: 70rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  @media only screen and(max-width:$bp-smallest) {
+     padding-bottom: 10rem;
+  }
+
+  &:last-of-type{
+    height: auto;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+
+  }
+
+  &-text {
+    font-size: 18px;
+    opacity: 0.5;
+  }
+
+  &-subheading {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
 
-  
 
-    &-text{
-      font-size: 18px;
+    &--title {
+
+      font-size: 4rem;
+
+      @media only screen and(max-width:$bp-medium) {
+        margin-top: 5rem;
+      }
     }
 
-      &-subheading{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
 
 
-        &--title{
+  }
 
-          @media only screen and(max-width:$bp-medium){
-             margin-top: 5rem;
-         }
-        }
+  &-title {
 
-      }
-
-     
-
-
-      &-btn{
-
-        @media only screen and(max-width:$bp-medium){
-    
-           margin-top: 2rem;
-       }
-
-
-      }
-    
-
-  &-img{
-    margin-bottom: 10rem;
-    max-width: 15rem;
+    font-size: 5rem;
+    margin-bottom: 1rem;
     
   }
 
 
-  &-buttons{
+  &-btn {
+
+    padding: 1.2rem 2.4rem;
+
+    @media only screen and(max-width:$bp-medium) {
+
+      margin-top: 2rem;
+      padding: 1.2rem 2rem;
+      color: white;
+    }
+
+
+  }
+
+
+  &-img {
+    margin-bottom: 10rem;
+    max-width: 12rem;
+
+  }
+
+
+  &-buttons {
     margin-top: 3rem;
 
 
-    @media only screen and(max-width:$bp-medium){
+    @media only screen and(max-width:$bp-medium) {
       display: flex;
       flex-direction: column;
-   }
+    }
   }
 
-  &-btn{
+  &-btn {
     border-radius: 20px;
     margin-left: 1.5rem;
 
-    &--primary{
+    &--primary {
       background: $cyan;
     }
-    &--secondary{
+
+    &--secondary {
       background: $lightBlue;
     }
   }
 
 }
 
-.computer{
+.computer {
 
   display: flex;
   justify-content: space-between;
 
-  @media only screen and(max-width:$bp-medium){
-   
-    
+  @media only screen and(max-width:$bp-medium) {
+
+
     display: inline-block;
     padding: 0 !important;
     margin-top: 7rem;
-   
+
+
+
+  }
+
+  &-div{
+
+    @media only screen and(max-width:$bp-medium) {
+
+
+      margin:2rem auto;
+      text-align: center;
   
-    
- }
-  @media only screen and(max-width:$bp-small){
-   
-    
-   
-    
+  
+    }
+
+
+  }
+
+  @media only screen and(max-width:$bp-small) {
+
+
+
+
     text-align: center;
-  
-    
- }
-  @media only screen and(max-width:$bp-smallest){
-   
-    
-   
-   
-  
-    
- }
 
- 
 
-  &-img{
+  }
+
+  @media only screen and(max-width:$bp-smallest) {}
+
+
+  &-img {
     max-width: 60%;
 
-    @media only screen and(max-width:$bp-large){
-    
-      max-width:50%;
+    @media only screen and(max-width:$bp-large) {
+
+      max-width: 50%;
     }
-    @media only screen and(max-width:$bp-medium){
+
+    @media only screen and(max-width:$bp-medium) {
       display: block;
       margin: auto;
-      max-width:80%;
+      max-width: 80%;
     }
   }
 
-  &-text{
+  &-text {
     font-size: 18px;
+    opacity: 0.5;
   }
 
-  &-subtitle{
+  &-subtitle {
     font-size: 3rem;
+    margin-bottom: 1rem;
   }
 
-  &-search{
+  &-search {
     align-self: flex-start;
   }
 }
 
-.center-image{
+.center-image {
 
 
-  &--img{
-    
-    margin-left:auto;
+  &--img {
+
+    margin-left: auto;
     margin-right: auto;
     max-width: 70%;
 
-    @media only screen and(max-width:$bp-large){
-    
-      max-width:60%;
+    @media only screen and(max-width:$bp-large) {
+
+      max-width: 60%;
     }
 
   }
 }
 
-.icons{
+.icons {
 
-  @media only screen and(max-width:$bp-large){
-    
+  @media only screen and(max-width:$bp-large) {
+
     padding: 5rem;
   }
 
-  &-search{
+  &-search {
 
-     display: flex;
-     justify-content: space-between;
-     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 
 
-     @media only screen and(max-width:$bp-medium){
-   
-    
-   
-     flex-direction: column;
-    
-      
-   }
+    @media only screen and(max-width:$bp-medium) {
+
+
+
+      flex-direction: column;
+
+
+    }
   }
 
-   
-    
-  &-img{
-     display: inline-block;
-     margin:auto;
-     max-width: 8rem;
+
+
+  &-img {
+    display: inline-block;
+    margin: auto;
+    max-width: 5rem;
+    margin-bottom: 1rem;
   }
 
-  &-flex{
+  &-flex {
 
-     display: flex;
-     justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 9rem;
 
-     @media only screen and(max-width:$bp-large){
-    
+    @media only screen and(max-width:$bp-large) {
+
       padding: 5rem;
     }
 
-    @media only screen and(max-width:$bp-medium){
-   
+    @media only screen and(max-width:$bp-medium) {
+
       display: block;
-     
+
       margin-left: auto;
       margin-right: auto;
-      padding:none;
-     
-       
+      padding: none;
+
+
     }
-    &--img{
+
+    &--img {
 
       max-width: 18rem;
-     
-      @media only screen and(max-width:$bp-medium){
-   
-           margin-top: 7rem;
-           margin-left: auto;
-           margin-right: auto;
-       
-         
+
+      @media only screen and(max-width:$bp-medium) {
+
+        margin-top: 7rem;
+        margin-left: auto;
+        margin-right: auto;
+
+
       }
     }
   }
 
-  
+
+
+}
+
+.showcase-second {
+  background-image: none !important;
  
 }
 
-.showcase-second{
-  background-image: none !important;
-  height: 50vh !important;
-
-  @media only screen and(max-width:$bp-medium){
-   
-    
-   
-    height: 60vh !important;
-   
-     
-  }
-}
-
-.footer{
+.footer {
   display: flex;
   justify-content: space-between;
 
@@ -250,104 +279,134 @@
   background: $grayish;
 
 
-  @media only screen and(max-width:$bp-medium){
-   
-     display: block;
-     text-align: center;
-    
-   
-     
-  }
-  @media only screen and(max-width:$bp-smallest){
-   
-     margin-top: 7rem;
-     line-height: 2.5;
-   
-     
+  @media only screen and(max-width:$bp-medium) {
+
+    display: block;
+    text-align: center;
+
   }
 
-  &-logo{
+  @media only screen and(max-width:$bp-smallest) {
+
+    margin-top: 7rem;
+    line-height: 2.5;
+
+
+  }
+
+  &-logo {
     max-width: 4%;
 
-    @media only screen and(max-width:$bp-medium){
-   
+    @media only screen and(max-width:$bp-medium) {
+
       max-width: 10%;
       margin: auto;
-        
-     }
+
+    }
   }
 
-  &-link-social{
-    margin-left: 1.8rem;
-  }
-
-  &-link:hover{
-    color:$cyan;
+  &-link-social {
+    margin-left: 1rem;
   }
 
   
 
-  &-social{
+
+
+  &-social {
     display: flex;
 
-    @media only screen and(max-width:$bp-medium){
-   
+    @media only screen and(max-width:$bp-medium) {
+
       margin-top: 3rem !important;
-      margin-left: 36% !important;
-    
-        
-     }
-    @media only screen and(max-width:$bp-small){
-   
+      text-align: center;
+      margin: auto;
+
+
+    }
+
+    @media only screen and(max-width:$bp-small) {
+
       margin-top: 4rem !important;
-      margin-left: 35% !important;
-        
-     }
-    @media only screen and(max-width:$bp-smallest){
-   
+     
+
+    }
+
+    @media only screen and(max-width:$bp-smallest) {
+
       margin-top: 4rem !important;
-      margin-left: 19% !important;
-        
-     }
    
+
+    }
+
   }
 
-  &-link-social:hover{
-    color:$cyan;
+  &-logo{
+     
+    @media only screen and(max-width:$bp-medium) {
+
+      margin-bottom: 2.5rem;
+
+
+    }
+
   }
 
-  &-section{
+  
+
+  &-section {
 
 
-    @media only screen and(max-width:$bp-medium){
-   
-          margin: auto;
-      
-        
-     }
+    @media only screen and(max-width:$bp-medium) {
 
-    &--left{
+      margin: auto;
+
+
+    }
+
+    &--left {
 
       margin-right: 57rem;
 
-      @media only screen and(max-width:$bp-medium){
-   
-       margin-right: 0;
-        
-          
-       }
+      @media only screen and(max-width:$bp-medium) {
+
+        margin-right: 0;
+
+
+      }
     }
-    &--right{
+
+    &--right {
 
       margin-left: 5rem;
 
-      @media only screen and(max-width:$bp-medium){
-   
-       margin-left: 0;
-        
-          
-       }
+      @media only screen and(max-width:$bp-medium) {
+
+        margin-left: 0;
+
+
+      }
     }
 
   }
+}
+
+// fixing problems
+
+i:hover{
+  cursor: pointer;
+  color:$cyan;
+}
+
+.icons-icon{
+
+
+  @media only screen and(max-width:$bp-medium) {
+
+    margin:auto;
+
+
+  }
+
+
 }
